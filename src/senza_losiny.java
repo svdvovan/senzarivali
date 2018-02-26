@@ -17,10 +17,15 @@ public class senza_losiny {
         Elements prices = doc1.getElementsByClass("current_price got_bold pink");
         Elements Names = doc1.select("a[data-product]");
 
+//   //     Elements id_product = doc1.select("input[name = product_id]");
+//        Elements id_product = doc1.select("data-param-id");
+//        String idName = id_product.val();
+//        System.out.print(" ; " + idName);
+        String id_product = doc1.getElementsByClass("fast_view_block").attr("data-param-id");
+        System.out.print(id_product);
 
 
-
-       int y = 0;
+        int y = 0;
         for (Element link1 : links1) {
             System.out.println(  link1.text() + " ; " );
 //            String addressUrl = lHref.get(y).attr("abs:href");
